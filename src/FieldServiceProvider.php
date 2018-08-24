@@ -18,7 +18,6 @@ class FieldServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-vat-validation', __DIR__.'/../dist/js/field.js');
-            Nova::style('nova-vat-validation', __DIR__.'/../dist/css/field.css');
         });
 
         Validator::extend('vat', function ($attribute, $value, $parameters, $validator) {
